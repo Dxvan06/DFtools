@@ -20,7 +20,7 @@ This repository contains a bash script to check and install essential digital fo
 
 4. **Volatility**
    - **Importance:** An open-source memory forensics framework for analyzing the runtime state of a system.
-   - **Run:** `volatility`
+   - **Run:** `cd volatility3 and python3 vol.py -h`
 
 5. **Foremost**
    - **Importance:** A console program to recover files based on their headers, footers, and internal data structures.
