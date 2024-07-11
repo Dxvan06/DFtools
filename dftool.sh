@@ -1,7 +1,18 @@
 #!/bin/bash
 
-# Array of tools to check and install
-tools=("sleuthkit" "autopsy" "volatility-tools" "wireshark" "foremost" "dc3dd" "libimage-exiftool-perl" "bulk-extractor" "RegRipper")
+# Array of tools to check and install with their package names
+declare -A tools=(
+    ["sleuthkit"]="sleuthkit"
+    ["autopsy"]="autopsy"
+    ["wireshark"]="wireshark"
+    ["volatility"]="volatility-tools"
+    ["foremost"]="foremost"
+    ["dc3dd"]="dc3dd"
+    ["exiftool"]="libimage-exiftool-perl"
+    ["bulk_extractor"]="bulk-extractor"
+    # ["caine"]="caine" # Not directly installable from apt-get
+    # ["osforensics"]="osforensics" # Not directly installable from apt-get
+)
 
 # Function to check if a tool is installed
 check_tool() {
@@ -9,13 +20,13 @@ check_tool() {
     then
         echo "$1 is already installed."
     else
-        echo "$1 is not installed. Attempting to install..."
-        sudo apt-get update && sudo apt-get install -y $1
+        echo "$1 is not installed. Attempting to install ${tools[$1]}..."
+        sudo apt-get update && sudo apt-get install -y ${tools[$1]}
     fi
 }
 
 # Loop through the tools and check/install them
-for tool in "${tools[@]}"
+for tool in "${!tools[@]}"
 do
     check_tool $tool
 done
