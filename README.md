@@ -58,7 +58,7 @@ This repository contains a bash script to check and install essential digital fo
 1. **Clone the Repository:**
    ```sh
    git clone https://github.com/yourusername/digital-forensics-tools.git
-   cd digital-forensics-tools
+   cd DFtools.sh
 Make the Script Executable:
 chmod +x DFtools.sh
 
