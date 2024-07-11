@@ -5,11 +5,11 @@ declare -A tools=(
     ["sleuthkit"]="sleuthkit"
     ["autopsy"]="autopsy"
     ["wireshark"]="wireshark"
-    ["volatility"]="volatility-tools"
     ["foremost"]="foremost"
     ["dc3dd"]="dc3dd"
     ["exiftool"]="libimage-exiftool-perl"
     ["bulk_extractor"]="bulk-extractor"
+    ["regripper"]="regripper"
     # ["caine"]="caine" # Not directly installable from apt-get
     # ["osforensics"]="osforensics" # Not directly installable from apt-get
 )
@@ -33,23 +33,22 @@ done
 
 # Special handling for tools not available via apt-get
 
-# Install RegRipper
-install_regripper() {
-    if [ -d "/usr/local/regripper" ]; then
-        echo "RegRipper is already installed."
+# Install Volatility
+install_volatility() {
+    if [ -d "/usr/local/volatility3" ]; then
+        echo "Volatility 3 is already installed."
     else
-        echo "RegRipper is not installed. Attempting to install..."
+        echo "Volatility 3 is not installed. Attempting to install..."
         sudo apt-get update
-        sudo apt-get install -y unzip libparse-win32registry-perl
-        wget https://github.com/keydet89/RegRipper3.0/archive/refs/heads/master.zip -O regripper.zip
-        unzip regripper.zip
-        sudo mv RegRipper3.0-master /usr/local/regripper
-        sudo chmod +x /usr/local/regripper/*.*
-        rm regripper.zip
-        echo "RegRipper installed successfully."
+        sudo apt-get install -y git python3 python3-pip
+        git clone https://github.com/volatilityfoundation/volatility3.git
+        sudo mv volatility3 /usr/local/volatility3
+        sudo pip3 install -r /usr/local/volatility3/requirements.txt
+        echo "Volatility 3 installed successfully."
     fi
 }
 
-install_regripper
+# Install Volatility 3
+install_volatility
 
 echo "All tools have been checked and necessary installations attempted."
