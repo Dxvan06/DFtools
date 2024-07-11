@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create dftools directory if it doesn't exist
-install_dir="$HOME/DFtools/"
+install_dir="$HOME/DFtools/volatility"
 mkdir -p $install_dir
 
 # Array of tools to check and install with their package names or install methods
@@ -14,7 +14,7 @@ declare -A tools=(
     ["exiftool"]="libimage-exiftool-perl"
     ["bulk_extractor"]="bulk-extractor"
     ["regripper"]="regripper"
-    ["PhotoRec"]="photorec"
+    ["PhotoRec"]="testdisk"
 )
 
 # Function to check if a tool is installed
