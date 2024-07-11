@@ -60,5 +60,5 @@ This repository contains a bash script to check and install essential digital fo
    git clone https://github.com/Dxvan06/DFtools.git
    cd DFtools.sh
    chmod +x DFtools.sh
-   ./DFtools
+   ./DFtools.sh
 
