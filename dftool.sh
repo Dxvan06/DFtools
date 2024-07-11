@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Array of tools to check and install
-tools=("sleuthkit" "autopsy" "volatility" "wireshark" "foremost" "dc3dd" "libimage-exiftool-perl" "bulk-extractor" "RegRipper")
+tools=("sleuthkit" "autopsy" "volatility-tools" "wireshark" "foremost" "dc3dd" "libimage-exiftool-perl" "bulk-extractor" "RegRipper")
 
 # Function to check if a tool is installed
 check_tool() {
