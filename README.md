@@ -61,6 +61,6 @@ This repository contains a bash script to check and install essential digital fo
    cd DFtools.sh
 2. **Use the below command:**
    ```sh
-   chmod +x DFtools.sh
-   ./DFtools.sh
+   chmod +x dftool.sh
+   ./dftool.sh
 
