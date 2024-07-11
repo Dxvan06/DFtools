@@ -59,8 +59,6 @@ This repository contains a bash script to check and install essential digital fo
    ```sh
    git clone https://github.com/Dxvan06/DFtools.git
    cd DFtools.sh
-Make the Script Executable:
-chmod +x DFtools.sh
+   chmod +x DFtools.sh
+   ./DFtools
 
-Run the Script:
-./DFtools
