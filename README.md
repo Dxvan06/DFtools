@@ -8,7 +8,7 @@ This repository contains a bash script to check and install essential digital fo
 
 1. **The Sleuth Kit (TSK)**
    - **Importance:** A collection of command-line tools for investigating disk images, including file system analysis and file recovery.
-   - **Run:** `sleuthkit`
+   - **Run:** `icat` `/` `ils` `/` `mactime`
 
 2. **Autopsy**
    - **Importance:** A graphical interface to The Sleuth Kit for analyzing hard drives and smartphones.
