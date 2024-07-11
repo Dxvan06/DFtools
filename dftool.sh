@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create dftools directory if it doesn't exist
-install_dir="$HOME/dftools"
+install_dir="$HOME/DFtools/volatility"
 mkdir -p $install_dir
 
 # Array of tools to check and install with their package names or install methods
