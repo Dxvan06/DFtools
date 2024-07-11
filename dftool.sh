@@ -11,6 +11,7 @@ check_tool() {
     else
         echo "$1 is not installed. Attempting to install..."
         sudo apt-get update && sudo apt-get install -y $1
+        git clone https://github.com/volatilityfoundation/volatility3.git $1
     fi
 }
 
