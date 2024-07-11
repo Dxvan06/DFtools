@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Array of tools to check and install
-tools=("sleuthkit" "autopsy" "wireshark" "volatility-tools" "foremost" "dc3dd" "libimage-exiftool-perl" "bulk-extractor" "caine" "osforensics")
+tools=("sleuthkit" "autopsy" "wireshark" "foremost" "dc3dd" "libimage-exiftool-perl" "bulk-extractor" "RegRipper")
 
 # Function to check if a tool is installed
 check_tool() {
@@ -11,7 +11,6 @@ check_tool() {
     else
         echo "$1 is not installed. Attempting to install..."
         sudo apt-get update && sudo apt-get install -y $1
-        sudo apt install regripper -y $1
         git clone https://github.com/volatilityfoundation/volatility3.git $1
     fi
 }
