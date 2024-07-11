@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create dftools directory if it doesn't exist
-install_dir="$HOME/DFtools/volatility"
+install_dir="$HOME/DFtools/"
 mkdir -p $install_dir
 
 # Array of tools to check and install with their package names or install methods
@@ -14,8 +14,7 @@ declare -A tools=(
     ["exiftool"]="libimage-exiftool-perl"
     ["bulk_extractor"]="bulk-extractor"
     ["regripper"]="regripper"
-    # ["caine"]="caine" # Not directly installable from apt-get
-    # ["osforensics"]="osforensics" # Not directly installable from apt-get
+    ["PhotoRec"]="photorec"
 )
 
 # Function to check if a tool is installed
@@ -39,7 +38,8 @@ check_tool() {
     fi
 }
 
-# Check and install tools available via apt-get
+# Check and install tools available via   # ["caine"]="caine" # Not directly installable from apt-get
+    # ["osforensics"]="osforensics" # Not directly installable from apt-get apt-get
 for tool in "${!tools[@]}"
 do
     check_tool $tool || exit 1
@@ -57,7 +57,6 @@ install_volatility() {
         echo "Volatility 3 is already installed."
     else
         echo "Volatility 3 is not installed. Attempting to install..."
-        sudo apt-get install -y git python3 python3-pip
         git clone https://github.com/volatilityfoundation/volatility3.git $tool_install_path
         sudo pip3 install -r $tool_install_path/requirements.txt
         echo "Volatility 3 installed successfully."
