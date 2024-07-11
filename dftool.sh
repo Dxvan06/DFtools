@@ -57,6 +57,7 @@ install_volatility() {
         echo "Volatility 3 is already installed."
     else
         echo "Volatility 3 is not installed. Attempting to install..."
+        sudo apt-get install -y git python3 python3-pip
         git clone https://github.com/volatilityfoundation/volatility3.git $tool_install_path
         sudo pip3 install -r $tool_install_path/requirements.txt
         echo "Volatility 3 installed successfully."
