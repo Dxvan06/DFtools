@@ -38,13 +38,13 @@ This repository contains a bash script to check and install essential digital fo
    - **Importance:** Scans a disk image and extracts useful information like email addresses, credit card numbers, and URLs.
    - **Run:** `bulk_extractor`
 
-9. **Caine (Computer Aided Investigative Environment)**
-   - **Importance:** A Linux distribution designed for digital forensics, integrating many forensic tools.
-   - **Run:** Not directly runnable as a command. Use the CAINE environment.
+9. **RegRipper**
+   - **Importance:** Open-source tool that is written in Perl and extracts/parses information like keys, values, data, etc. from the Registry database for data analysis..
+   - **Run:** `regripper`
 
-10. **OSForensics**
-    - **Importance:** A comprehensive suite for file indexing, searching, memory forensics, and more.
-    - **Run:** Not directly runnable as a command. Use the OSForensics environment.
+10. **PhotoRec**
+    - **Importance:** A tool that supports recovery of lost files from hard disk, optical media, and digital camera.
+    - **Run:** `photorec`
 
 ## How to Use the Script
 
